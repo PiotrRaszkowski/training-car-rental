@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+<f:view>
+    <h:head>
+    </h:head>
+    <h:body>
+        <h:form>
+            <p:panelGrid columns="2">
+                <h:outputText value="Manufacturer" />
+                <h:outputText value="#{carDetailsView.car.manufacturer}" />
+
+                <h:outputText value="Model" />
+                <h:outputText value="#{carDetailsView.car.model}" />
+
+                <h:outputText value="Registration number" />
+                <h:outputText value="#{carDetailsView.car.registerNumber}" />
+
+                <h:outputText value="Year" />
+                <h:outputText value="#{carDetailsView.car.year}" />
+
+                <h:outputText value="Color" />
+                <h:outputText value="#{carDetailsView.car.color}" />
+
+                <h:outputText value="Seats number" />
+                <h:outputText value="#{carDetailsView.car.seatsNumber}" />
+            </p:panelGrid>
+
+            <p:panelGrid columns="2">
+                <h:outputText value="Manufacturer" />
+                <h:outputText value="#{carDetailsView.alternativeCar.manufacturer}" />
+
+                <h:outputText value="Model" />
+                <h:outputText value="#{carDetailsView.alternativeCar.model}" />
+
+                <h:outputText value="Registration number" />
+                <h:outputText value="#{carDetailsView.alternativeCar.registerNumber}" />
+
+                <h:outputText value="Year" />
+                <h:outputText value="#{carDetailsView.alternativeCar.year}" />
+
+                <h:outputText value="Color" />
+                <h:outputText value="#{carDetailsView.alternativeCar.color}" />
+
+                <h:outputText value="Seats number" />
+                <h:outputText value="#{carDetailsView.alternativeCar.seatsNumber}" />
+            </p:panelGrid>
+        </h:form>
+    </h:body>
+</f:view>
+
+</html>
