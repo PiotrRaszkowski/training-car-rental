@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+<f:view>
+    <h:head>
+    </h:head>
+    <h:body>
+        <h:form>
+            <p:panelGrid columns="3">
+                <h:outputText value="Manufacturer" />
+                <p:selectOneMenu id="manufacturer" value="#{addCarView.car.manufacturer}">
+                    <f:selectItems value="#{addCarView.manufacturers}" var="manufacturer" itemValue="#{manufacturer}" itemLabel="#{manufacturer}" />
+                </p:selectOneMenu>
+                <p:message id="manufacturerMessage" for="manufacturer" />
+
+                <h:outputText value="Model" />
+                <p:inputText id="model" value="#{addCarView.car.model}" />
+                <p:message for="model" />
+
+                <h:outputText value="Registration number" />
+                <p:inputMask id="registerNumber" value="#{addCarView.car.registerNumber}" mask="**-*****"/>
+                <p:message for="registerNumber" />
+
+                <h:outputText value="Year" />
+                <p:inputText id="year" value="#{addCarView.car.year}" />
+                <p:message for="year" />
+
+                <h:outputText value="Color" />
+                <p:inputText id="color" value="#{addCarView.car.color}" />
+                <p:message for="color" />
+
+                <h:outputText value="Seats number" />
+                <p:selectOneMenu id="seatsNumber" value="#{addCarView.car.seatsNumber}">
+                    <f:selectItem itemValue="2" itemLabel="2" />
+                    <f:selectItem itemValue="3" itemLabel="3" />
+                    <f:selectItem itemValue="4" itemLabel="4" />
+                    <f:selectItem itemValue="5" itemLabel="5" />
+                    <f:selectItem itemValue="6" itemLabel="6" />
+                    <f:selectItem itemValue="7" itemLabel="7" />
+                </p:selectOneMenu>
+                <p:message for="seatsNumber" />
+            </p:panelGrid>
+
+            <p:commandButton value="Save" actionListener="#{addCarView.save}" update="@form" />
+        </h:form>
+    </h:body>
+</f:view>
+
+</html>

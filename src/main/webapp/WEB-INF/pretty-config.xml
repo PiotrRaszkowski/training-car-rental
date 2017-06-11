@@ -14,4 +14,9 @@
         <action onPostback="false">#{carDetailsView.init}</action>
     </url-mapping>
 
+    <url-mapping id="addCar">
+        <pattern value="/add-car" />
+        <view-id value="/addCar.xhtml" />
+    </url-mapping>
+
 </pretty-config>
