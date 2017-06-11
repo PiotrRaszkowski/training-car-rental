@@ -6,12 +6,21 @@ import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 @Entity
+@NamedQueries({
+        @NamedQuery(name = Car.GET_CAR_BY_REG_NO, query = "SELECT c FROM Car c WHERE c.registerNumber = :regNo")
+})
 public class Car {
+
+    private static final String PREFIX = "pl.jitsolutions.training.cr.business.car.entity.";
+
+    public static final String GET_CAR_BY_REG_NO = PREFIX + "getCarByRegNo";
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
